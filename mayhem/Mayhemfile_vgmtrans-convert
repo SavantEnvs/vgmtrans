@@ -1,0 +1,9 @@
+project: savantenvs/vgmtrans
+target: vgmtrans-convert
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/vgmtrans-convert/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_convert
+    libfuzzer: true
+    timeout: 60

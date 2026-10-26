@@ -1,0 +1,8 @@
+project: savantenvs/vgmtrans
+target: vgmtrans-open
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/vgmtrans-open/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_open @@
+    timeout: 60
